@@ -5,8 +5,8 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import 'tachyons';
 
-ReactDOM.render( 
+ReactDOM.render(
   <App />,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement // Type Assertion (tell ts compiler this will be HTMLElement)
 );
 registerServiceWorker();
