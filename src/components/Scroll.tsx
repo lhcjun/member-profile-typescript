@@ -1,6 +1,10 @@
 import * as React from 'react';
 
-const Scroll = (props) => (
+type ScrollProps = {
+  children?: JSX.Element;
+}
+
+const Scroll: React.FC<ScrollProps> = (props: ScrollProps) => (
   <div
     style={{
       overflowY: 'auto',
