@@ -17,8 +17,8 @@ interface IAppState {
   searchField: string;
 }
 
-class App extends React.Component<IAppProps, IAppState> {   // <Props, StateObj>
-  constructor(props) {
+class App extends React.Component<IAppProps, IAppState> {
+  constructor(props) {    // or  constructor(props: IAppProps) {}
     super(props);
     this.state = {
       members: [],

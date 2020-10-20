@@ -18,3 +18,8 @@ const CardList = ({ members }: { members: Array<IMember> }) => (
 );
 
 export default CardList;
+
+/*
+  members → type array
+  elements in array → type IMember
+*/
