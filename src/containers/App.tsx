@@ -18,7 +18,7 @@ interface IAppState {
 }
 
 class App extends React.Component<IAppProps, IAppState> {
-  constructor(props) {    // or  constructor(props: IAppProps) {}
+  constructor(props: IAppProps) {
     super(props);
     this.state = {
       members: [],
@@ -33,19 +33,19 @@ class App extends React.Component<IAppProps, IAppState> {
       .catch(console.log);
   }
 
-  onSearchChange = (event) => {
+  onSearchChange = (event: React.SyntheticEvent<HTMLInputElement>): void => {
     this.setState({ searchField: event.currentTarget.value });
   };
 
-  render() {
+  render(): JSX.Element {
     const { members, searchField } = this.state;
-    
-    const filteredMembers = members.filter((member) => {
+
+    const filteredMembers = members.filter(member => {
       return member.name.toLowerCase().includes(searchField.toLowerCase());
     });
 
     return !members.length ? (
-      <h1 className = "f1 tc">Loading...</h1>
+      <h1 className="f1 tc">Loading...</h1>
     ) : (
       <div className="tc">
         <h1 className="f1" id="title">Our Team</h1>
