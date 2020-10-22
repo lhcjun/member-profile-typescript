@@ -1,1 +1,3 @@
-This is a Typescript version of [member-profile](https://github.com/lhcjun/member-profile).
+### member profile typescript
+
+This is a Typescript version of the [member-profile](https://github.com/lhcjun/member-profile) repo.
